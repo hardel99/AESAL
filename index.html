@@ -12,9 +12,24 @@
 
   <!--Content-->
   <div id="fullpage">
-    <div class="section sample" id="section0">
-      <h1>Slide 1</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <div class="section" id="section0">
+      <!--h1>Slide 1</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p-->
+
+      <div class="timer-container center">
+        <div class="timer-semi-container right">
+          <div class="timer-semi-circle mirrored highlighted first"></div>
+          <div class="timer-semi-circle second"></div>
+        </div>
+
+        <div class="timer-semi-container left">
+          <div class="timer-semi-circle mirrored third"></div>
+          <div class="timer-semi-circle highlighted fourth"></div>
+        </div>
+
+        <h1 class="iniciar" id="text-transition">Go</h1>
+        <h2 class="jaid" style="margin-top: 250px;"></h2>
+      </div>
     </div>
     <div class="section" id="section1">
       <div class="slide" id="slide1">
@@ -69,6 +84,7 @@
   <!--Scripts-->
   <script type="text/javascript" src="js/fullpage.js"></script>
   <script type="text/javascript" src="js/countUp.js"></script>
+  <script type="text/javascript" src="js/jquery.min.js"></script>
   <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
