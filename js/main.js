@@ -163,6 +163,7 @@ var
 
         setInterval(function() {
           $('.jaid').text("Empezamos!");
+          $('#section0').addClass('transit');
         }, 700);
 
         $('#section0').click(function () {
