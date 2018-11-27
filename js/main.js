@@ -23,10 +23,10 @@ for (var j = 0; j < normal.length; j++) {
   });
 }
 
-var secuencer=0;
+var secuencer1=0, secuencer2=0, secuencer3=0;
 
 $('#section2').click(function () {
-  switch (secuencer) {
+  switch (secuencer1) {
     case 0:
       $('.one').addClass('subt-complete');
       break;
@@ -41,9 +41,57 @@ $('#section2').click(function () {
       break;
     case 4:
       fullpage_api.moveSectionDown();
+      $('.empezamos').removeClass('subt-complete');
+      setTimeout(function(){
+        $('.empezamos').addClass('subt-complete');
+      }, 500);
       break;
   }
-  secuencer++;
+  secuencer1++;
+});
+
+$('#section3').click(function(){
+  if(secuencer2 == 0){
+    $('#almost').addClass('subt-complete');
+    secuencer2++;
+  } else{
+    fullpage_api.moveSectionDown();
+    setTimeout(function (){
+      $('.slide-title1').addClass('subt-complete');
+    },1000);
+  }
+});
+
+$('#slide1').click(function(){
+  var texting;
+  switch (secuencer3) {
+    case 0:
+      texting='Representar';
+      break;
+    case 1:
+      texting='Innovación';
+      break;
+    case 2:
+      texting='Reducir Brechas';
+      break;
+    case 3:
+      texting='Políticas Públicas';
+      break;
+    case 4:
+      texting='Ecosistema';
+      break;
+    case 5:
+      fullpage_api.moveSlideRight();
+      break;
+  }
+
+  $('.slide-title1').removeClass('subt-complete');
+
+  setTimeout(function(){
+    $('.slide-title1').text(texting);
+    $('.slide-title1').addClass('subt-complete');
+  }, 500);
+  secuencer3++;
 });
 
 document.getElementById('section4').addEventListener('click', function() {
@@ -63,7 +111,7 @@ document.getElementById('section4').addEventListener('click', function() {
   }
 });
 
-document.getElementById('section3').addEventListener('click', function() {
+/*document.getElementById('section3').addEventListener('click', function() {
   if (cont == 0) {
     counter('counting', 0, 342584, 2);
     cont++;
@@ -71,7 +119,7 @@ document.getElementById('section3').addEventListener('click', function() {
     fullpage_api.moveSectionDown();
     cont = 0;
   }
-});
+});*/
 
 //Easing outCubic
 var easingFn = function(t, b, c, d) {
@@ -184,13 +232,16 @@ var
       if (count >= duration) {
         window.clearInterval(_interval);
 
-        setInterval(function() {
+        setTimeout(function() {
           $('.jaid').text("Empezamos!");
           $('#section0').addClass('transit');
         }, 700);
 
         $('#section0').click(function () {
           fullpage_api.moveSectionDown();
+          setTimeout(function(){
+            $('.empezamos').addClass('subt-complete');
+          }, 700);
         });
       }
 
