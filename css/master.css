@@ -218,9 +218,11 @@ li:last-child{
 .cambiando{
   position: absolute;
   width: 400px;
-  top: 50px;
-  right: 250px;
+  top: 100px;
+  right: 200px;
   font-size: 4em;
+  opacity: 0;
+  transition: opacity .5s linear;
 }
 
 .cambiando::after{
@@ -236,9 +238,39 @@ li:last-child{
   position: absolute;
   top: 50%;
   right: 200px;
-  max-width: 600px;
+  max-width: 400px;
+  width: 400px;
   height: auto;
   transform: translateY(-50%);
+  opacity: 0;
+  transition: opacity 0.5s linear;
+}
+
+#section5{
+  background-image: url(../img/pasos.png);
+  background-size: cover;
+  background-position: center 0px;
+  background-repeat: no-repeat;
+  color: #2bbdcd;
+}
+
+.pasos-container{
+  position: absolute;
+  top: 120px;
+  left: 50%;
+  width: 100%;
+  transform: translateX(-50%);
+}
+
+.pasos-subtitle{
+  margin-top: 20px;
+}
+
+#section6{
+  background-image: url(../img/aesal.png);
+  background-size: cover;
+  background-position: center 0px;
+  background-repeat: no-repeat;
 }
 
 .center {
@@ -301,7 +333,7 @@ li:last-child{
   -webkit-transform: rotate(180deg);
 }
 
-.empezamos{
+.empezamos, .empezamos1, .pasos-container{
   opacity: 0;
   transition: opacity .5s linear;
 }

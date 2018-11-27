@@ -15,14 +15,6 @@ var cont = 0;
   }
 });*/
 
-var normal = document.getElementsByClassName('sample');
-
-for (var j = 0; j < normal.length; j++) {
-  normal[j].addEventListener('click', function() {
-    fullpage_api.moveSectionDown();
-  });
-}
-
 var secuencer1=0, secuencer2=0, secuencer3=0;
 
 $('#section2').click(function () {
@@ -41,9 +33,8 @@ $('#section2').click(function () {
       break;
     case 4:
       fullpage_api.moveSectionDown();
-      $('.empezamos').removeClass('subt-complete');
       setTimeout(function(){
-        $('.empezamos').addClass('subt-complete');
+        $('.empezamos1').addClass('subt-complete');
       }, 500);
       break;
   }
@@ -82,6 +73,11 @@ $('#slide1').click(function(){
       break;
     case 5:
       fullpage_api.moveSlideRight();
+      secuencer3=-1;
+      setTimeout(function(){
+        $('.cambiando').addClass('subt-complete');
+        $('.slide-img').addClass('subt-complete');
+      }, 800);
       break;
   }
 
@@ -94,7 +90,97 @@ $('#slide1').click(function(){
   secuencer3++;
 });
 
-document.getElementById('section4').addEventListener('click', function() {
+$('#slide2').click(function () {
+  var rutas;
+  switch (secuencer3) {
+    case 0:
+      ruta = "asech.png";
+      break;
+    case 1:
+      ruta = "asec.png";
+      break;
+    case 2:
+      ruta = "asegua.png";
+      break;
+    case 3:
+      ruta = "cae.png";
+      break;
+    case 4:
+      //Cambio a APOYO
+      ruta = "conamype.png";
+
+      $('.cambiando').removeClass('subt-complete');
+
+      setTimeout(function(){
+        $('.cambiando').text('APOYO');
+        $('.cambiando').addClass('subt-complete');
+      }, 400);
+      break;
+    case 5:
+      ruta = "innbox.png";
+      break;
+    case 6:
+      ruta = "fusades.png";
+      break;
+    case 7:
+      ruta = "fundemas.png";
+      break;
+    case 8:
+      fullpage_api.moveSectionDown();
+      secuencer3=-1;
+      setTimeout(function(){
+        $('.pasos-container').addClass('subt-complete');
+      }, 800);
+      break;
+    }
+
+    $('.slide-img').removeClass('subt-complete');
+
+    setTimeout(function(){
+      $('.slide-img').attr('src', 'img/' + ruta);
+      $('.slide-img').addClass('subt-complete');
+    }, 500);
+
+    secuencer3++;
+});
+
+$('#section5').click(function(){
+  var texting;
+  var textingSub;
+  switch (secuencer3) {
+    case 0:
+      texting='Comunidad Lean StartUp';
+      textingSub = '(San Salvador, Santa Ana, Ahuachapán y San Miguel)';
+      break;
+    case 1:
+      texting='Comunidad de Mentores';
+      textingSub = "";
+      break;
+    case 2:
+      texting='Programa 3xi';
+      textingSub = '(Innovación, Inclusión e inspiración)';
+      break;
+    case 3:
+      texting='Eventos';
+      textingSub = "";
+      break;
+    case 4:
+      fullpage_api.moveSectionDown();
+      break;
+  }
+
+  $('.pasos-container').removeClass('subt-complete');
+
+  setTimeout(function(){
+    $('.pasos').text(texting);
+    $('.pasos-subtitle').text(textingSub);
+
+    $('.pasos-container').addClass('subt-complete');
+  }, 500);
+  secuencer3++;
+});
+
+/*document.getElementById('section4').addEventListener('click', function() {
   if (cont == 0) {
     var x = document.getElementsByClassName('detail');
     var y = document.getElementsByClassName('clima');
@@ -109,7 +195,7 @@ document.getElementById('section4').addEventListener('click', function() {
     fullpage_api.moveSectionDown();
     cont = 0;
   }
-});
+});*/
 
 /*document.getElementById('section3').addEventListener('click', function() {
   if (cont == 0) {
