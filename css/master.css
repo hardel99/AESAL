@@ -174,7 +174,7 @@ li:last-child{
 #tecc h2{
   margin-top: 50px;
   font-size: 1.9em;
-  color: #797979;
+  color: #242424;
   opacity: 0;
   transition: opacity .5s ease-in-out;
 }
