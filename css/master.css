@@ -14,6 +14,10 @@ h1{
   font-weight: lighter;
 }
 
+#almost{
+  color:#232324;
+}
+
 h2{
   font-size: 2.5em;
 }
@@ -106,7 +110,7 @@ li:last-child{
 }
 
 #section0{
-  background-color: #252525;
+  background-color: #010211;
   /*background: linear-gradient(#4e4c4c, #342c2c);*/
   color: white;
   transition: all 0.5s ease-in-out;
@@ -174,7 +178,7 @@ li:last-child{
 #tecc h2{
   margin-top: 50px;
   font-size: 1.9em;
-  color: #242424;
+  color: #797979;
   opacity: 0;
   transition: opacity .5s ease-in-out;
 }
@@ -267,7 +271,14 @@ li:last-child{
 }
 
 #section6{
-  background-image: url(../img/aesal.png);
+  background-image: url(../img/aesal1.png);
+  background-size: cover;
+  background-position: center 0px;
+  background-repeat: no-repeat;
+}
+
+#section7{
+  background-image: url(../img/thank.png);
   background-size: cover;
   background-position: center 0px;
   background-repeat: no-repeat;

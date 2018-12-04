@@ -180,6 +180,10 @@ $('#section5').click(function(){
   secuencer3++;
 });
 
+$('#section6').click(function(){
+  fullpage_api.moveSectionDown();
+});
+
 /*document.getElementById('section4').addEventListener('click', function() {
   if (cont == 0) {
     var x = document.getElementsByClassName('detail');
